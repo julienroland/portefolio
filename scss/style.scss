@@ -54,43 +54,46 @@ nav ul li{
 .orbit-container li{
     text-align: center;
     img{
-    display:inline-block;
-    margin:auto;
-    z-index: 20;
-    position:relative;
+        display:inline-block;
+        margin:auto;
+        z-index: 20;
+        position:relative;
     }
 }
+.orbit-prev,.orbit-next{
+    height:100%;
+}
 .image{
-    overflow: visible;
+    overflow: hidden;
+    position:relative;
     z-index: 10;
     background-color: black;
 
     img{
        /* height:1080px;
-        width:1920px;*/
-        max-width: none;
-    }
-    .ban{
-        background-color: rgba(0,0,0,0.6);
-        left:0;
-        right:0;
-        bottom:0;
-        top:200px;
-        position: absolute;
-        margin:auto;
-        max-height:300px;
-        text-align: center;
+       width:1920px;*/
+       max-width: none;
+   }
+   .ban{
+    background-color: rgba(0,0,0,0.6);
+    left:0;
+    right:0;
+    bottom:0;
+    position: absolute;
+    margin:auto;
+    max-height:300px;
+    text-align: center;
 
+}
+ul{
+    @include horizontal-list();
+    margin-top:50px;
+    li{
+        display:inline-block;
+        float:none;
     }
-    ul{
-        @include horizontal-list();
-        margin-top:50px;
-        li{
-            display:inline-block;
-            float:none;
-        }
 
-    }
+}
 }
 
 ul>li.bulle{   
@@ -199,6 +202,7 @@ nav.top-bar{
     padding:0 2%;
     position: fixed;
     a,li{
+        text-decoration: none;
         &:hover{
             text-decoration:none;
             background-color: rgba(100,100,100,0.1);
@@ -213,28 +217,44 @@ ul#imgTracker{
     { 
         margin-bottom: 20px;
         a{
-        width:200px;
-        height: 200px;
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-        img{
-            display: inline;
-            
-            margin:auto;
-            max-width: 200px;
+            width:200px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            img{
+                display: inline;
+
+                margin:auto;
+                max-width: 200px;
+
+            }
         }
     }
-}
-}
-.heplbox-container:after{
 
+    li:first-child{
+       a{
+         height:300px;
+         width:300px;
+
+     }
+     img{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: inline;
+        margin:auto;
+        max-width: 300px;
+    }
+}
 
 }
 .overImg {
     position:absolute;
-    display:none;
-    height:100%;
+    display:block;
+    height:0%;
     width:100%;
     top:0;
     left:0;
@@ -242,9 +262,16 @@ ul#imgTracker{
     opacity: 1;
     background-color: rgba(50,50,50,0.9);
     color:white;
-    padding:10% 2%;
+    /* padding:10% 2%;*/
     font-weight: bold;
     line-height: 1.5em;
+    overflow: hidden;
+    @include transition(all 0.5s ease);
+}
+#imgTracker a:hover .overImg{
+    height:100%;
+    padding:10% 2%;
+    overflow: visible;
 }
 .main p{
     text-align: left;
@@ -262,8 +289,10 @@ ul.mainMenu{
     width:60%;
     li{
         font-size: 10em;
-
+        padding:0 0.1em;
         a{
+            color:rgba(255,255,255,0.9);
+            text-decoration: none;
             &:hover{
                 text-decoration:none;
             }
@@ -275,17 +304,18 @@ ul.mainMenu{
     }
 }
 a{
-    color:rgba(255,255,255,0.9);
+    color:$main;
+    text-decoration: underline;
     &:hover{
-        color:rgba(255,255,255,0.9);
+        color:darken($main,20%);
         text-decoration:underline;
-       
+
     }
     i{
         &:hover{
-             @include single-text-shadow(0,0,5px);
-        }
-    }
+         @include single-text-shadow(0,0,5px);
+     }
+ }
 
 }
 .contact:first-child{

@@ -133,6 +133,7 @@ $preloader-class: "preloader" !default;
 
       &>* {
         position: absolute;
+        height:100%;
         top: 0;
         width: 100%;
         @if $text-direction == rtl {
@@ -155,8 +156,11 @@ $preloader-class: "preloader" !default;
           @if $orbit-caption-position == "bottom" {
             position: absolute;
             bottom: 0;
+            left:0;
+            right:0;
             z-index: 20;
             font-weight: bold;
+            height:20%;
           } @else if $orbit-caption-position == "under" {
             position: relative;
           }
@@ -164,7 +168,7 @@ $preloader-class: "preloader" !default;
           background-color: $orbit-caption-bg;
           color: $orbit-caption-font-color;
           width: 100%;
-          padding: 10px 14px;
+          padding: 25px 14px 10px 14px;
           font-size: em-calc(14);
         }
       }
@@ -234,7 +238,7 @@ $preloader-class: "preloader" !default;
       margin-top: -25px;
       background-color: $orbit-nav-bg;
       width: 50px;
-      height: 80%;
+      height: 100%;
       line-height: 50px;
       color: white;
       text-indent: -9999px !important;

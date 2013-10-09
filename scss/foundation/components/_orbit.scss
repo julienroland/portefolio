@@ -134,8 +134,9 @@ $preloader-class: "preloader" !default;
     position: relative;
 
     img { display: block; 
+      background-size: cover;
     &:hover{
-     
+
     }
     }
 

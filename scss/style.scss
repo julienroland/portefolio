@@ -247,21 +247,21 @@ ul#imgTracker{
     }
 
     li:first-child{
-     a{
-       height:300px;
-       width:300px;
+       a{
+         height:300px;
+         width:300px;
 
-   }
-   img{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    display: inline;
-    margin:auto;
-    max-width: 300px;
-}
+     }
+     img{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: inline;
+        margin:auto;
+        max-width: 300px;
+    }
 }
 
 }
@@ -290,57 +290,57 @@ ul#imgTracker{
 /*#imgTracker li:hover{
     @include rotateY(180deg,400px);
     @include transition(all,2s,linear);
-}*/
-#imgTracker a:hover img{
-    opacity:0.2;
+    }*/
+    #imgTracker a:hover img{
+        opacity:0.2;
 
-}
-.main p{
-    text-align: left;
-
-}
-.main p.lien{
-    text-align: center;
-    a{
-        font-weight: bold;  
     }
-}
-ul.mainMenu{
-    display:inline-block;
-    text-align: center;
-    width:60%;
-    li{
-        font-size: 10em;
-        padding:0 0.1em;
+    .main p{
+        text-align: left;
+
+    }
+    .main p.lien{
+        text-align: center;
         a{
-            color:rgba(255,255,255,0.9);
-            text-decoration: none;
-            &:hover{
-                text-decoration:none;
-            }
-            p{
-                font-size: 24px;
-            }
+            font-weight: bold;  
         }
-
     }
-}
-a{
-    color:$main;
-    text-decoration: underline;
-    &:hover{
-        color:darken($main,20%);
-        text-decoration:underline;
+    ul.mainMenu{
+        display:inline-block;
+        text-align: center;
+        width:60%;
+        li{
+            font-size: 10em;
+            padding:0 0.1em;
+            a{
+                color:rgba(255,255,255,0.9);
+                text-decoration: none;
+                &:hover{
+                    text-decoration:none;
+                }
+                p{
+                    font-size: 24px;
+                }
+            }
 
+        }
     }
-    i{
+    a{
+        color:$main;
+        text-decoration: underline;
         &:hover{
-           @include single-text-shadow(0,0,5px);
-       }
-   }
+            color:darken($main,20%);
+            text-decoration:underline;
 
-}
-.contact:first-child{
+        }
+        i{
+            &:hover{
+             @include single-text-shadow(0,0,5px);
+         }
+     }
+
+ }
+ .contact:first-child{
     margin-top: 20px;
 
 }
@@ -369,4 +369,45 @@ i{
 .contact{
     line-height: 2em;
     display:block;
+}
+/**IE TU PUES*/
+
+.no-rgba {
+
+    h2{
+        border-bottom:1px solid $main;
+    }
+    .mainMenu 
+    {
+        li{
+           &:hover{
+               background-color: black; 
+           }
+       }
+
+       a{
+        color:white;
+
+        &:hover{
+            color:$main;
+
+
+        }
+
+    }
+}
+#container{
+    background-color: $grayIE;
+}
+.main{
+    background-color: $whiteIE;
+}
+}
+.no-csscolumns{
+    .large-4{
+        width:33.3333%;   
+    }
+    .large-7{
+        width:58.3333%;
+    }
 }

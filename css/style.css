@@ -234,7 +234,7 @@ nav ul.title-area {
 /* line 33, ../scss/style.scss */
 
 .logo {
-  background-image: url('/img/logoprint.png?1381172961');
+  background-image: url('../img/logoprint.png?1381172961');
   width: 111px;
   height: 60px;
   position: absolute;
@@ -379,7 +379,7 @@ ul > li.bulle {
   height: 200px;
   vertical-align: baseline;
   bottom: 0;
-  background-image: url('/img/perso.png?1381048064');
+  background-image: url('../img/perso.png?1381048064');
   display: inline-block;
   margin-left: 5%;
   float: none;
@@ -765,4 +765,55 @@ fieldset {
 .contact {
   line-height: 2em;
   display: block;
+}
+
+/**IE TU PUES*/
+
+/* line 377, ../scss/style.scss */
+
+.no-rgba h2,
+.no-rgba h3 {
+  border-bottom: 1px solid #14c83c;
+}
+
+/* line 383, ../scss/style.scss */
+
+.no-rgba .mainMenu li:hover {
+  background-color: black;
+}
+
+/* line 388, ../scss/style.scss */
+
+.no-rgba .mainMenu a {
+  color: white;
+}
+
+/* line 391, ../scss/style.scss */
+
+.no-rgba .mainMenu a:hover {
+  color: #14c83c;
+}
+
+/* line 399, ../scss/style.scss */
+
+.no-rgba #container {
+  background-color: #efefef;
+}
+
+/* line 402, ../scss/style.scss */
+
+.no-rgba .main {
+  background-color: #fdfdfd;
+}
+
+/* line 407, ../scss/style.scss */
+
+.no-csscolumns .large-4 {
+  width: 33.3333%;
+}
+
+/* line 410, ../scss/style.scss */
+
+.no-csscolumns .large-7 {
+  width: 58.3333%;
 }

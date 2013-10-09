@@ -87,6 +87,10 @@ nav ul li{
     text-align: center;
 
 }
+
+.infosSup{
+    float:right;
+}
 ul{
     @include horizontal-list();
     margin-top:50px;
@@ -158,6 +162,12 @@ figure{
     background-color: rgba(100,100,100,0.1);
     overflow: hidden;
     padding-top:40px;
+    .down{
+        position:absolute;
+        width:150px;
+        height:30px;
+        top:30%;
+    }
 }
 .main{
 
@@ -237,21 +247,21 @@ ul#imgTracker{
     }
 
     li:first-child{
-     a{
-       height:300px;
-       width:300px;
+       a{
+         height:300px;
+         width:300px;
 
-   }
-   img{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    display: inline;
-    margin:auto;
-    max-width: 300px;
-}
+     }
+     img{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: inline;
+        margin:auto;
+        max-width: 300px;
+    }
 }
 
 }
@@ -320,9 +330,9 @@ a{
     }
     i{
         &:hover{
-           @include single-text-shadow(0,0,5px);
-       }
-   }
+         @include single-text-shadow(0,0,5px);
+     }
+ }
 
 }
 .contact:first-child{

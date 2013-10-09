@@ -100,12 +100,6 @@ function ShowHideNavBar()
   }
 };
 
-  $('a[href~="index"]').click(function(e){
-    e.preventDefault;
-    $('#container').goTo();
-
-  });
-
 
 $('#imgTracker a').hover(function(){
  var oP =  $(this).attr('href');
@@ -176,6 +170,13 @@ if($('#container').size()&&!$('#accueil').size())
 $('.main').css({
   minHeight:iHeight,
 });
+
+$('a[href~="index"]').on("click",function(e){
+  e.preventDefault;
+  $('#container').goTo();
+
+});
+
 function orbit(){
   var iHeight=$(window).height();
   if(!$('.ban:visible')){
@@ -239,9 +240,11 @@ $(window).resize(function()
 
 });   
 
+
 dontOver();
 orbit();
 ShowHideNavBar();
+
 
 }).call(this,jQuery);
 

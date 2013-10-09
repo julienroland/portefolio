@@ -335,7 +335,7 @@ ul#imgTracker{
         }
         i{
             &:hover{
-             @include single-text-shadow(0,0,5px);
+                @include single-text-shadow(0,0,20px);
          }
      }
 

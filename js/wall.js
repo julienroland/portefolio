@@ -102,7 +102,7 @@ function ShowHideNavBar()
 };
 
 
-$('#imgTracker a').hover(function(){
+$('#imgTracker a.th').hover(function(){
  var oP =  $(this).attr('href');
  $('.track').css({
   backgroundImage:"url("+oP+")",

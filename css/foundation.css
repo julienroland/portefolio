@@ -8162,22 +8162,18 @@ label.error {
 
 /* Breadcrumbs */
 
-/* line 115, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 113, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs {
-  display: block;
+  display: inline;
   padding: 0.5625em 0.875em 0.5625em;
   overflow: hidden;
   margin-left: 0;
   list-style: none;
-  border-style: solid;
-  border-width: 1px;
-  background-color: #f6f6f6;
-  border-color: gainsboro;
   border-radius: 3px;
 }
 
-/* line 119, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 117, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > * {
   margin: 0;
@@ -8186,14 +8182,14 @@ label.error {
   text-transform: uppercase;
 }
 
-/* line 60, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 58, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *:hover a,
 .breadcrumbs > *:focus a {
   text-decoration: underline;
 }
 
-/* line 63, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 61, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > * a,
 .breadcrumbs > * span {
@@ -8201,21 +8197,21 @@ label.error {
   color: #2ba6cb;
 }
 
-/* line 69, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 67, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *.current {
   cursor: default;
   color: #333333;
 }
 
-/* line 72, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 70, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *.current a {
   cursor: default;
   color: #333333;
 }
 
-/* line 78, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 76, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *.current:hover,
 .breadcrumbs > *.current:hover a,
@@ -8224,19 +8220,19 @@ label.error {
   text-decoration: none;
 }
 
-/* line 82, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 80, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *.unavailable {
   color: #999999;
 }
 
-/* line 84, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 82, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *.unavailable a {
   color: #999999;
 }
 
-/* line 89, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 87, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *.unavailable:hover,
 .breadcrumbs > *.unavailable:hover a,
@@ -8247,7 +8243,7 @@ label.error {
   cursor: default;
 }
 
-/* line 96, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 94, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *:before {
   content: "/";
@@ -8257,7 +8253,7 @@ label.error {
   top: 1px;
 }
 
-/* line 104, ../scss/foundation/components/_breadcrumbs.scss */
+/* line 102, ../scss/foundation/components/_breadcrumbs.scss */
 
 .breadcrumbs > *:first-child:before {
   content: " ";

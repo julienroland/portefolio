@@ -10,7 +10,7 @@
   <script async src="/js/vendor/custom.modernizr.js"></script>
 
 </head>
-<body>
+<body id="top">
   <div id="container" style="display:block">
    <nav class="top-bar fixed">
     <ul class="title-area">
@@ -42,6 +42,10 @@
   </section>
 </nav>
 <div class="main">
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="current">Contact</li>
+  </ul>
   <div class="row">
     <h2><i class="icon-globe"></i>&nbsp;Me contacter? </h2>
     <div class="large-4 columns"><img src="img/imac.png" alt=""></div>
@@ -60,30 +64,27 @@
               <textarea name="message" id="message" style="min-width:300px; min-height:100px;" cols="100" rows="20"></textarea>
             </div>
             <div class="large-5 large-offset-1 columns">
-             <p class="name contact"><i class="icon-user"></i>&nbsp;Julien Roland</p>
-             <p class="mail contact"><i class="icon-envelope-alt"></i>&nbsp;roland.julien.pro@gmail.com</p>
-             <p class="tel contact"><i class="icon-mobile-phone"></i>&nbsp;+32 495/94.51.93</p>
-             <p class="adress contact"><i class="icon-map-marker"></i>&nbsp;Namur (Belgique)</p>
-           </div>
-         </div>
-         <div class="row">
-          <div class="large-6 columns"><input class="button prefix" type="submit" value="Envoyer"></div>
-        </div>
-        <div class="infosSup">
-          <p class="name contact"><i class="icon-user"></i>&nbsp;Julien Roland</p>
-          <p class="mail contact"><i class="icon-envelope-alt"></i>&nbsp;roland.julien.pro@gmail.com</p>
-          <p class="tel contact"><i class="icon-mobile-phone"></i>&nbsp;+32 495/94.51.93</p>
-          <p class="adress contact"><i class="icon-map-marker"></i>&nbsp;Namur (Belgique)</p>
-        </div>
-      </fieldset>
-    </form>
+              <address itemscope itemtype="person">
+                <span class="name contact" itemprop="name"><i class="icon-user"></i>&nbsp;Julien Roland</span>
+                <meta itemprop="name" content="www.julien-roland.be"></meta>
+                <span class="mail contact" itemprop="email"><i class="icon-envelope-alt"></i>&nbsp;roland.julien.pro@gmail.com</span>
+                <span class="tel contact" itemprop="telephone"><i class="icon-mobile-phone"></i>&nbsp;+32 495/94.51.93</span>
+                <span class="adress contact" itemprop="homeLocation"><i class="icon-map-marker"></i>&nbsp;Namur (Belgique)</span>
+              </address>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns"><input class="button prefix" type="submit" value="Envoyer"></div>
+          </div>
 
+        </fieldset>
+      </form>
+
+    </div>
   </div>
 </div>
 </div>
-<span class="down"><a href="">Aller en bas</a></span>
-</div>
-<div class="image">
+<div class="image" >
   <ul data-orbit >
     <li>
       <img src="../img/test.png" />
@@ -99,7 +100,7 @@
     </li>
   </ul>
 </div>
-<span><a href="#top">Remonter</a></span>
+<span id="down"><a href="#top">Me contacter</a></span>
 <script>
 document.write('<script src=/js/vendor/'
   + ('__proto__' in {} ? 'zepto': 'jquery')

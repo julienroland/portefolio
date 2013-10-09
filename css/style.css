@@ -639,31 +639,31 @@ ul#imgTracker li:first-child img {
   overflow: visible;
 }
 
-/* line 290, ../scss/style.scss */
+/* line 294, ../scss/style.scss */
 
 #imgTracker a:hover img {
   opacity: 0.2;
 }
 
-/* line 293, ../scss/style.scss */
+/* line 298, ../scss/style.scss */
 
 .main p {
   text-align: left;
 }
 
-/* line 297, ../scss/style.scss */
+/* line 302, ../scss/style.scss */
 
 .main p.lien {
   text-align: center;
 }
 
-/* line 299, ../scss/style.scss */
+/* line 304, ../scss/style.scss */
 
 .main p.lien a {
   font-weight: bold;
 }
 
-/* line 303, ../scss/style.scss */
+/* line 308, ../scss/style.scss */
 
 ul.mainMenu {
   display: inline-block;
@@ -671,65 +671,65 @@ ul.mainMenu {
   width: 60%;
 }
 
-/* line 307, ../scss/style.scss */
+/* line 312, ../scss/style.scss */
 
 ul.mainMenu li {
   font-size: 10em;
   padding: 0 0.1em;
 }
 
-/* line 310, ../scss/style.scss */
+/* line 315, ../scss/style.scss */
 
 ul.mainMenu li a {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
 
-/* line 313, ../scss/style.scss */
+/* line 318, ../scss/style.scss */
 
 ul.mainMenu li a:hover {
   text-decoration: none;
 }
 
-/* line 316, ../scss/style.scss */
+/* line 321, ../scss/style.scss */
 
 ul.mainMenu li a p {
   font-size: 24px;
 }
 
-/* line 323, ../scss/style.scss */
+/* line 328, ../scss/style.scss */
 
 a {
   color: #14c83c;
   text-decoration: underline;
 }
 
-/* line 326, ../scss/style.scss */
+/* line 331, ../scss/style.scss */
 
 a:hover {
   color: #0b6b20;
   text-decoration: underline;
 }
 
-/* line 332, ../scss/style.scss */
+/* line 337, ../scss/style.scss */
 
 a i:hover {
   text-shadow: 0 0 5px #aaaaaa;
 }
 
-/* line 338, ../scss/style.scss */
+/* line 343, ../scss/style.scss */
 
 .contact:first-child {
   margin-top: 20px;
 }
 
-/* line 342, ../scss/style.scss */
+/* line 347, ../scss/style.scss */
 
 .row form {
   margin: 20px 0;
 }
 
-/* line 344, ../scss/style.scss */
+/* line 349, ../scss/style.scss */
 
 .row form input:hover,
 .row form textarea:hover,
@@ -740,28 +740,29 @@ a i:hover {
   box-shadow: 0 0 5px #b1f7c0;
 }
 
-/* line 349, ../scss/style.scss */
+/* line 354, ../scss/style.scss */
 
 .row form input[type="submit"] {
   background-color: #14c83c;
   border: 1px solid #0d8227;
 }
 
-/* line 352, ../scss/style.scss */
+/* line 357, ../scss/style.scss */
 
 .row form input[type="submit"]:hover {
   background-color: #0f9a2e;
 }
 
-/* line 357, ../scss/style.scss */
+/* line 362, ../scss/style.scss */
 
 fieldset {
   border: 1px solid #14c83c;
   padding: 1em;
 }
 
-/* line 364, ../scss/style.scss */
+/* line 369, ../scss/style.scss */
 
-p.contact {
+.contact {
   line-height: 2em;
+  display: block;
 }

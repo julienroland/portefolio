@@ -151,28 +151,29 @@ if($('#container').size()&&$('#accueil').size())
     display:"block",
   }).goTo();
  });
-
-  $('a[href="#accueil"]').click(function(e){
-   e.preventDefault();
-   $('#accueil').goTo();
- });
-
 }
 if($('#container').size()&&!$('#accueil').size())
 {
-
+  $('a[href="#accueil"]').click(function(e){
+   $('#container').css({
+    minHeight:iHeight,
+    display:"block",
+  }).goTo();
+ });
   $('a[href="#top"]').click(function(e){
    e.preventDefault();
    $('#top').goTo();
  });
-
+  $('a[href="#down"]').click(function(e){
+    e.preventDefault;
+    $('#down').goTo();
+  });
 }
 $('.main').css({
   minHeight:iHeight,
 });
 
 $('a[href~="index"]').on("click",function(e){
-  e.preventDefault;
   $('#container').goTo();
 
 });

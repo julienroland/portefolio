@@ -69,7 +69,42 @@ function hideLogo()
   }
 
 };
+function ShowHideNavBar()
+{
+  $(document).load()
+  {
+    if($('#accueil').size())
+    {
+      var nHeightMenuAccueil = ($('ul.mainMenu p').height())*2;
+      if($(window).scrollTop()<=iHeight-nHeightMenuAccueil)
+      {
+        $('.top-bar').hide();
+      }
+      else
+      {
+        $('.top-bar').show();
+      }
+      $(window).scroll(function(){
 
+        if($(window).scrollTop()<=iHeight-nHeightMenuAccueil)
+        {
+          $('.top-bar').fadeOut('fast');
+        }
+        else
+        {
+          $('.top-bar').fadeIn('normal');
+        }
+
+      });
+    }
+  }
+};
+
+  $('a[href~="index"]').click(function(e){
+    e.preventDefault;
+    $('#container').goTo();
+
+  });
 
 
 $('#imgTracker a').hover(function(){
@@ -96,7 +131,7 @@ $('img.voir').css({
   backgroundPosition:'center 20px',
   overflow:"hidden",
 });
-if($('#container').size()&&!$('#accueil').size())
+/*if($('#container').size()&&!$('#accueil').size())
 {
 
   $('#container').css({
@@ -111,21 +146,31 @@ if($('#container').size()&&!$('#accueil').size())
     fontSize:(iHeight/100)*35,
   });
 
-}
-if($('#container').size()&&$('#accueil').size())
-  {
-$('.ban li').click(function(e){
- e.preventDefault();
- $('#container').css({
-  minHeight:iHeight,
-  display:"block",
-}).goTo();
-});
+}*/
 
-$('a[href="#accueil"]').click(function(e){
- e.preventDefault();
- $('#accueil').goTo();
-});
+if($('#container').size()&&$('#accueil').size())
+{
+  $('.ban li:first-child').click(function(e){
+   e.preventDefault();
+   $('#container').css({
+    minHeight:iHeight,
+    display:"block",
+  }).goTo();
+ });
+
+  $('a[href="#accueil"]').click(function(e){
+   e.preventDefault();
+   $('#accueil').goTo();
+ });
+
+}
+if($('#container').size()&&!$('#accueil').size())
+{
+
+  $('a[href="#top"]').click(function(e){
+   e.preventDefault();
+   $('#top').goTo();
+ });
 
 }
 $('.main').css({
@@ -135,17 +180,13 @@ function orbit(){
   var iHeight=$(window).height();
   if(!$('.ban:visible')){
     var oSlider=  $('.orbit-container>ul');
-    oSlider.show().css({
-      height:iHeight,
+    oSlider.show().css({  
       top:0,
       right:0,
       left:0,
       bottom:0,
       margin:"auto",
       overflow:"hidden",
-    });
-    $('.orbit-container').css({
-      height:iHeight,
     });
   }
   else
@@ -200,6 +241,7 @@ $(window).resize(function()
 
 dontOver();
 orbit();
+ShowHideNavBar();
 
 }).call(this,jQuery);
 

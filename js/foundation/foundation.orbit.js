@@ -171,7 +171,7 @@
       var h = current.height();
       if (!settings.variable_height) {
         slides_container.children().each(function(){
-          h = $(window).height();
+          h = "100%";
         });
       }
       slides_container.height(h);

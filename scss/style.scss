@@ -57,14 +57,16 @@ nav ul li{
         display:inline-block;
         margin:auto;
         z-index: 20;
+        top:-20%;
         position:relative;
     }
 }
 .orbit-prev,.orbit-next{
     height:100%;
 }
+
 .image{
-    overflow: hidden;
+    overflow: visible;
     position:relative;
     z-index: 10;
     background-color: black;
@@ -88,6 +90,7 @@ nav ul li{
 ul{
     @include horizontal-list();
     margin-top:50px;
+    overflow:visible;
     li{
         display:inline-block;
         float:none;
@@ -154,13 +157,14 @@ figure{
     border-top: 2px solid $gray;
     background-color: rgba(100,100,100,0.1);
     overflow: hidden;
+    padding-top:40px;
 }
 .main{
 
     width:90%;
     background-color: rgba(255,255,255,0.9);
     margin:auto;
-    padding:60px;
+    padding:2em 1em 5em 1em;
 }
 .hiddenContentPerso{
     display:none;
@@ -233,21 +237,21 @@ ul#imgTracker{
     }
 
     li:first-child{
-       a{
-         height:300px;
-         width:300px;
+     a{
+       height:300px;
+       width:300px;
 
-     }
-     img{
-        position:absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-        display: inline;
-        margin:auto;
-        max-width: 300px;
-    }
+   }
+   img{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: inline;
+    margin:auto;
+    max-width: 300px;
+}
 }
 
 }
@@ -260,18 +264,21 @@ ul#imgTracker{
     left:0;
     z-index: 10;
     opacity: 1;
-    background-color: rgba(50,50,50,0.9);
+    background-color: rgba(0,0,0,0.8);
     color:white;
     /* padding:10% 2%;*/
     font-weight: bold;
     line-height: 1.5em;
     overflow: hidden;
-    @include transition(all 0.5s ease);
+    @include transition(all 0.5s linear);
 }
 #imgTracker a:hover .overImg{
     height:100%;
     padding:10% 2%;
     overflow: visible;
+}
+#imgTracker a:hover img{
+    opacity:0.2;
 }
 .main p{
     text-align: left;
@@ -313,9 +320,9 @@ a{
     }
     i{
         &:hover{
-         @include single-text-shadow(0,0,5px);
-     }
- }
+           @include single-text-shadow(0,0,5px);
+       }
+   }
 
 }
 .contact:first-child{

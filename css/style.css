@@ -273,26 +273,27 @@ nav ul li {
   display: inline-block;
   margin: auto;
   z-index: 20;
+  top: -20%;
   position: relative;
 }
 
-/* line 63, ../scss/style.scss */
+/* line 64, ../scss/style.scss */
 
 .orbit-prev,
 .orbit-next {
   height: 100%;
 }
 
-/* line 66, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 
 .image {
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   z-index: 10;
   background-color: black;
 }
 
-/* line 72, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 
 .image img {
   /* height:1080px;
@@ -300,7 +301,7 @@ nav ul li {
   max-width: none;
 }
 
-/* line 77, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 
 .image .ban {
   background-color: rgba(0, 0, 0, 0.6);
@@ -313,7 +314,7 @@ nav ul li {
   text-align: center;
 }
 
-/* line 88, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 
 .image ul {
   margin: 0;
@@ -322,6 +323,7 @@ nav ul li {
   overflow: hidden;
   *zoom: 1;
   margin-top: 50px;
+  overflow: visible;
 }
 
 /* line 60, ../../../../../Program Files (x86)/Prepros/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
@@ -356,14 +358,14 @@ nav ul li {
   padding-right: 0;
 }
 
-/* line 91, ../scss/style.scss */
+/* line 94, ../scss/style.scss */
 
 .image ul li {
   display: inline-block;
   float: none;
 }
 
-/* line 99, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 
 ul > li.bulle {
   z-index: 100;
@@ -381,7 +383,7 @@ ul > li.bulle {
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5) 2px;
 }
 
-/* line 113, ../scss/style.scss */
+/* line 116, ../scss/style.scss */
 
 ul > li.bulle a {
   width: 188px;
@@ -389,25 +391,25 @@ ul > li.bulle a {
   display: block;
 }
 
-/* line 119, ../scss/style.scss */
+/* line 122, ../scss/style.scss */
 
 ul > li.bulle:hover {
   cursor: pointer;
 }
 
-/* line 125, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 
 li.bulle:first-child {
   margin-left: 0;
 }
 
-/* line 128, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 
 .clear {
   clear: both;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 134, ../scss/style.scss */
 
 figure {
   width: 150px;
@@ -421,7 +423,7 @@ figure {
   white-space: pre-wrap;
 }
 
-/* line 139, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 
 figure figcaption {
   padding-top: 35px;
@@ -429,19 +431,19 @@ figure figcaption {
   height: 100px;
 }
 
-/* line 145, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 
 .hide {
   display: none;
 }
 
-/* line 148, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
 
 .clear {
   clear: both;
 }
 
-/* line 151, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 
 #container {
   width: 100%;
@@ -449,30 +451,31 @@ figure figcaption {
   border-top: 2px solid rgba(0, 0, 0, 0.8);
   background-color: rgba(100, 100, 100, 0.1);
   overflow: hidden;
+  padding-top: 40px;
 }
 
-/* line 158, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 
 .main {
   width: 90%;
   background-color: rgba(255, 255, 255, 0.9);
   margin: auto;
-  padding: 60px;
+  padding: 2em 1em 5em 1em;
 }
 
-/* line 165, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 
 .hiddenContentPerso {
   display: none;
 }
 
-/* line 168, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 
 .row {
   max-width: 100%;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 
 h2,
 h3 {
@@ -484,7 +487,7 @@ h3 {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
 }
 
-/* line 178, ../scss/style.scss */
+/* line 182, ../scss/style.scss */
 
 h2:hover,
 h3:hover {
@@ -494,7 +497,7 @@ h3:hover {
   transition: all, 0.3s, ease;
 }
 
-/* line 184, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 
 h3 {
   font-size: 24px;
@@ -504,34 +507,34 @@ h3 {
   margin: auto;
 }
 
-/* line 191, ../scss/style.scss */
+/* line 195, ../scss/style.scss */
 
 h3:hover {
   border: 0;
 }
 
-/* line 195, ../scss/style.scss */
+/* line 199, ../scss/style.scss */
 
 p.text {
   line-height: 1.8em;
   margin-bottom: 1em;
 }
 
-/* line 201, ../scss/style.scss */
+/* line 205, ../scss/style.scss */
 
 nav.top-bar {
   padding: 0 2%;
   position: fixed;
 }
 
-/* line 204, ../scss/style.scss */
+/* line 208, ../scss/style.scss */
 
 nav.top-bar a,
 nav.top-bar li {
   text-decoration: none;
 }
 
-/* line 206, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 
 nav.top-bar a:hover,
 nav.top-bar li:hover {
@@ -541,20 +544,20 @@ nav.top-bar li:hover {
   transition: all, 0.3s, ease;
 }
 
-/* line 213, ../scss/style.scss */
+/* line 217, ../scss/style.scss */
 
 ul#imgTracker {
   padding: 1% 0;
   text-align: center;
 }
 
-/* line 217, ../scss/style.scss */
+/* line 221, ../scss/style.scss */
 
 ul#imgTracker li {
   margin-bottom: 20px;
 }
 
-/* line 219, ../scss/style.scss */
+/* line 223, ../scss/style.scss */
 
 ul#imgTracker li a {
   width: 200px;
@@ -564,7 +567,7 @@ ul#imgTracker li a {
   z-index: 1;
 }
 
-/* line 225, ../scss/style.scss */
+/* line 229, ../scss/style.scss */
 
 ul#imgTracker li a img {
   display: inline;
@@ -572,14 +575,14 @@ ul#imgTracker li a img {
   max-width: 200px;
 }
 
-/* line 236, ../scss/style.scss */
+/* line 240, ../scss/style.scss */
 
 ul#imgTracker li:first-child a {
   height: 300px;
   width: 300px;
 }
 
-/* line 241, ../scss/style.scss */
+/* line 245, ../scss/style.scss */
 
 ul#imgTracker li:first-child img {
   position: absolute;
@@ -592,7 +595,7 @@ ul#imgTracker li:first-child img {
   max-width: 300px;
 }
 
-/* line 254, ../scss/style.scss */
+/* line 258, ../scss/style.scss */
 
 .overImg {
   position: absolute;
@@ -603,17 +606,17 @@ ul#imgTracker li:first-child img {
   left: 0;
   z-index: 10;
   opacity: 1;
-  background-color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   /* padding:10% 2%;*/
   font-weight: bold;
   line-height: 1.5em;
   overflow: hidden;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
-/* line 271, ../scss/style.scss */
+/* line 275, ../scss/style.scss */
 
 #imgTracker a:hover .overImg {
   height: 100%;
@@ -621,25 +624,31 @@ ul#imgTracker li:first-child img {
   overflow: visible;
 }
 
-/* line 276, ../scss/style.scss */
+/* line 280, ../scss/style.scss */
+
+#imgTracker a:hover img {
+  opacity: 0.2;
+}
+
+/* line 283, ../scss/style.scss */
 
 .main p {
   text-align: left;
 }
 
-/* line 280, ../scss/style.scss */
+/* line 287, ../scss/style.scss */
 
 .main p.lien {
   text-align: center;
 }
 
-/* line 282, ../scss/style.scss */
+/* line 289, ../scss/style.scss */
 
 .main p.lien a {
   font-weight: bold;
 }
 
-/* line 286, ../scss/style.scss */
+/* line 293, ../scss/style.scss */
 
 ul.mainMenu {
   display: inline-block;
@@ -647,65 +656,65 @@ ul.mainMenu {
   width: 60%;
 }
 
-/* line 290, ../scss/style.scss */
+/* line 297, ../scss/style.scss */
 
 ul.mainMenu li {
   font-size: 10em;
   padding: 0 0.1em;
 }
 
-/* line 293, ../scss/style.scss */
+/* line 300, ../scss/style.scss */
 
 ul.mainMenu li a {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
 
-/* line 296, ../scss/style.scss */
+/* line 303, ../scss/style.scss */
 
 ul.mainMenu li a:hover {
   text-decoration: none;
 }
 
-/* line 299, ../scss/style.scss */
+/* line 306, ../scss/style.scss */
 
 ul.mainMenu li a p {
   font-size: 24px;
 }
 
-/* line 306, ../scss/style.scss */
+/* line 313, ../scss/style.scss */
 
 a {
   color: #14c83c;
   text-decoration: underline;
 }
 
-/* line 309, ../scss/style.scss */
+/* line 316, ../scss/style.scss */
 
 a:hover {
   color: #0b6b20;
   text-decoration: underline;
 }
 
-/* line 315, ../scss/style.scss */
+/* line 322, ../scss/style.scss */
 
 a i:hover {
   text-shadow: 0 0 5px #aaaaaa;
 }
 
-/* line 321, ../scss/style.scss */
+/* line 328, ../scss/style.scss */
 
 .contact:first-child {
   margin-top: 20px;
 }
 
-/* line 325, ../scss/style.scss */
+/* line 332, ../scss/style.scss */
 
 .row form {
   margin: 20px 0;
 }
 
-/* line 327, ../scss/style.scss */
+/* line 334, ../scss/style.scss */
 
 .row form input:hover,
 .row form textarea:hover,
@@ -716,27 +725,27 @@ a i:hover {
   box-shadow: 0 0 5px #b1f7c0;
 }
 
-/* line 332, ../scss/style.scss */
+/* line 339, ../scss/style.scss */
 
 .row form input[type="submit"] {
   background-color: #14c83c;
   border: 1px solid #0d8227;
 }
 
-/* line 335, ../scss/style.scss */
+/* line 342, ../scss/style.scss */
 
 .row form input[type="submit"]:hover {
   background-color: #0f9a2e;
 }
 
-/* line 340, ../scss/style.scss */
+/* line 347, ../scss/style.scss */
 
 fieldset {
   border: 1px solid #14c83c;
   padding: 1em;
 }
 
-/* line 347, ../scss/style.scss */
+/* line 354, ../scss/style.scss */
 
 p.contact {
   line-height: 2em;

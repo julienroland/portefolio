@@ -118,56 +118,64 @@ $preloader-class: "preloader" !default;
   }
 
   .orbit-container {
-    overflow: hidden;
-    width: 100%;
+   /* overflow: hidden;*/
+   width: 100%;
+   position: absolute;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   margin:auto;
+
+   .orbit-slides-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     position: relative;
-  
 
-    .orbit-slides-container {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: relative;
+    img { display: block; 
+    &:hover{
+     
+    }
+    }
 
-      img { display: block; }
+    &>* {
+      position: absolute;
+      height:100%;
+      width: 100%;
+      @if $text-direction == rtl {
+        margin-right: 100%;
+      }
+      @else {
+        margin-left: 100%;
+      }
 
-      &>* {
-        position: absolute;
-        height:100%;
-        top: 0;
-        width: 100%;
+      &:first-child {
         @if $text-direction == rtl {
-          margin-right: 100%;
+          margin-right: 0%;
         }
         @else {
-          margin-left: 100%;
-        }
-
-        &:first-child {
-          @if $text-direction == rtl {
-          margin-right: 0%;
-          }
-          @else {
           margin-left: 0%;
-          }
         }
+      }
 
-        .orbit-caption {
-          @if $orbit-caption-position == "bottom" {
-            position: absolute;
-            bottom: 0;
-            left:0;
-            right:0;
-            z-index: 20;
-            font-weight: bold;
-            height:20%;
+      .orbit-caption {
+        @if $orbit-caption-position == "bottom" {
+          position: absolute;
+          bottom: 0;
+          left:0;
+          right:0;
+          z-index: 20;
+          font-weight: bold;
+          margin:auto;
+          height:20%;
           } @else if $orbit-caption-position == "under" {
             position: relative;
           }
 
           background-color: $orbit-caption-bg;
           color: $orbit-caption-font-color;
-          width: 100%;
+          width: 90%;
           padding: 25px 14px 10px 14px;
           font-size: em-calc(14);
         }
@@ -192,6 +200,7 @@ $preloader-class: "preloader" !default;
       height: 6px;
       width: 100px;
       z-index: 10;
+      display:none;
       .orbit-progress {
         @if $orbit-timer-show-progress-bar {
           height: 100%;
@@ -235,9 +244,8 @@ $preloader-class: "preloader" !default;
     .orbit-next {
       position: absolute;
       top:0;
-      margin-top: -25px;
       background-color: $orbit-nav-bg;
-      width: 50px;
+      width: 5%;
       height: 100%;
       line-height: 50px;
       color: white;
@@ -245,9 +253,8 @@ $preloader-class: "preloader" !default;
       z-index: 10;
 
       &:hover {
-        background-color: $orbit-nav-bg-hover;
+        background-color: rgba(0,0,0,0.9);
       }
-
       & > span {
         position: absolute;
         top: 50%;
@@ -259,88 +266,89 @@ $preloader-class: "preloader" !default;
       }
     }
     .orbit-prev { #{$default-float}: 0;
-      & > span {
-        border-#{$opposite-direction}-style: solid;
-        border-color: transparent;
-        border-#{$opposite-direction}-color: $orbit-nav-arrow-color;
-      }
-      &:hover > span {
-        border-#{$opposite-direction}-color: $orbit-nav-arrow-color-hover;
-      }
+    & > span {
+      border-#{$opposite-direction}-style: solid;
+      border-color: transparent;
+      border-#{$opposite-direction}-color: $orbit-nav-arrow-color;
     }
-    .orbit-next { #{$opposite-direction}: 0;
-      & > span {
-        border-color: transparent;
-        border-#{$default-float}-style: solid;
-        border-#{$default-float}-color: $orbit-nav-arrow-color;
-        #{$default-float}: 50%;
-        margin-#{$default-float}: -8px;
-      }
-      &:hover > span {
-        border-#{$default-float}-color: $orbit-nav-arrow-color-hover;
-      }
+    &:hover > span {
+      border-#{$opposite-direction}-color: $orbit-nav-arrow-color-hover;
     }
   }
-
-  .orbit-bullets {
-    margin: 0 auto 30px auto;
-    overflow: hidden;
-    position: relative;
-    top: 10px;
-
-    li {
-      display: block;
-      width: $orbit-bullet-radius;
-      height: $orbit-bullet-radius;
-      background: $orbit-bullet-nav-color;
-      float: $default-float;
-      margin-#{$opposite-direction}: 6px;
-      border: solid 1px $orbit-bullet-nav-color-active;
-      @include radius(1000px);
-
-      &.active {
-        background: $orbit-bullet-nav-color-active;
-      }
-
-      &:last-child { margin-#{$opposite-direction}: 0; }
-    }
+  .orbit-next { #{$opposite-direction}: 0;
+  & > span {
+    border-color: transparent;
+    border-#{$default-float}-style: solid;
+    border-#{$default-float}-color: $orbit-nav-arrow-color;
+    #{$default-float}: 50%;
+    margin-#{$default-float}: -8px;
   }
+  &:hover > span {
+    border-#{$default-float}-color: $orbit-nav-arrow-color-hover;
+  }
+}
+}
+
+.orbit-bullets {
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 7%;
+  top: 10px;
+
+  li {
+    display: block;
+    width: $orbit-bullet-radius;
+    height: $orbit-bullet-radius;
+    background: $orbit-bullet-nav-color;
+    float: $default-float;
+    margin-#{$opposite-direction}: 6px;
+    border: solid 1px $orbit-bullet-nav-color-active;
+    @include radius(1000px);
+
+    &.active {
+      background: $orbit-bullet-nav-color-active;
+    }
+
+    &:last-child { margin-#{$opposite-direction}: 0; }
+  }
+}
+
+.touch {
+  .orbit-container {
+    .orbit-prev,
+    .orbit-next { display: none; }
+  }
+
+  .orbit-bullets { display: none; }
+}
+
+
+@media #{$small} {
 
   .touch {
     .orbit-container {
       .orbit-prev,
-      .orbit-next { display: none; }
+      .orbit-next { display: inherit; }
     }
 
-    .orbit-bullets { display: none; }
+    .orbit-bullets { display: block; }
   }
 
+}
 
-  @media #{$small} {
-
-    .touch {
-      .orbit-container {
-        .orbit-prev,
-        .orbit-next { display: inherit; }
-      }
-
-      .orbit-bullets { display: block; }
+@media only screen and (max-width: #{$small-screen}) {
+  .orbit-stack-on-small {
+    .orbit-slides-container {height: auto !important;}
+    .orbit-slides-container > * {
+      position: relative;
+      margin-left: 0% !important;
     }
-
+    .orbit-timer,
+    .orbit-next,
+    .orbit-prev,
+    .orbit-bullets {display: none;}
   }
-
-  @media only screen and (max-width: #{$small-screen}) {
-    .orbit-stack-on-small {
-      .orbit-slides-container {height: auto !important;}
-      .orbit-slides-container > * {
-        position: relative;
-        margin-left: 0% !important;
-      }
-      .orbit-timer,
-      .orbit-next,
-      .orbit-prev,
-      .orbit-bullets {display: none;}
-    }
-  }
+}
 
 }

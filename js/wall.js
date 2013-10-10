@@ -1,7 +1,7 @@
 ;(function($){
   var iHeight=$(window).height();
   var headerHeight = $('header').height();
-  var aImg= ["img/wall.jpg","img/wall2.jpg","img/wall3.jpg","img/wall4.jpg"];
+  var aImg= ["img/wall.png","img/wall1.png","img/wall2.png"];
 
   $('.bulle>figure').hide();
 
@@ -18,7 +18,7 @@
     if($('.ban:visible'))
     {
      $('.image').css({
-      backgroundImage:'url('+aImg[Math.floor(Math.random()*4)]+')',
+      backgroundImage:'url('+aImg[Math.floor(Math.random()*3)]+')',
       backgroundSize:"cover", 
 
     });
@@ -44,18 +44,6 @@ function resizeImage()
       backgroundRepeat:'no-repeat',
     });
   }
-};
-function dontOver(height)
-{
-  var height = $(window).height();
-  if((height-300)<150)
-  {
-    $('.image>ul').css({
-      top:180,
-    });
-
-  }
-
 };
 function hideLogo()
 {
@@ -102,8 +90,9 @@ function ShowHideNavBar()
 };
 
 
-$('#imgTracker a.th').hover(function(){
- var oP =  $(this).attr('href');
+$('#imgTracker li.th').hover(function(){
+ var oP =  $(this).find('img').attr('src');
+
  $('.track').css({
   backgroundImage:"url("+oP+")",
   backgroundRepeat:"no-repeat",
@@ -164,8 +153,8 @@ $('a[href~="index"]').on("click",function(e){
 
 function orbit(){
   var iHeight=$(window).height();
-  if(!$('.ban:visible')){
-    var oSlider=  $('.orbit-container>ul');
+  if(!$('.ban').size()){
+    var oSlider=  $('.orbit-slides-container');
     oSlider.show().css({  
       top:0,
       right:0,
@@ -225,7 +214,6 @@ $(window).resize(function()
 });   
 
 
-dontOver();
 orbit();
 ShowHideNavBar();
 

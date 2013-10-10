@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>PorteFolio - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script async src="./js/vendor/modernizr.custom.js"></script>
+
+</head>
+<body id="top">
+  <div id="container" >
+   <nav class="top-bar fixed">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1><a href="index.html"><i class="icon-reorder"></i>&nbsp;Revenir à l'accueil</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+       <li >
+         <a href="quisuisje.html"><i class="icon-male"></i>&nbsp;Qui suis-je?</a>
+       </li>
+       <li class="active">
+         <a href="blog.html"><i class="icon-comment"></i>&nbsp;Blog</a>
+       </li>
+       <li class="has-dropdown not-click"><a href="projets.html"><i class="icon-suitcase"></i>&nbsp;Projets</a>
+        <ul class="dropdown"> 
+          <li><label>Liste des projets</label></li>
+          <li><a href="voirProjet.html"><i class="icon-camera"></i>&nbsp;Logo personnel</a></li>
+          <li><a href="voirProjet1.html"><i class="icon-signal"></i>&nbsp;Logo personnel</a></li>
+          <li class="divider"></li>
+        </ul>
+      </li>
+      <li>
+        <a href="contact.html"><i class="icon-globe"></i>&nbsp;Contact</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+<section role="main" class="main">
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="current">Blog</li>
+  </ul>
+  <div class="row">
+    <h2><i class="icon-globe"></i>&nbsp;Mon blog </h2>
+  </div>
+  <div class="row article">
+    <div class="large-3 columns moreArticle">
+      <i class="icon-calendar article"></i>
+    <a class="date article" href=""><time datetime="11:12">Jeudi 10 Octobre à 11:12</time></a>
+      <a class="commentsNb article" href="voirArticle.html"><i class="icon-comments"></i> 3 Commentaires</a>
+    </div>
+    <article class="large-9 columns">
+      <h3>Découverte de modernizr</h3>
+      <a href="" class="th radius imageArticle">
+        <img src="./img/modernizr.png" alt="">
+      </a>
+      <p class="blog">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, voluptatem, accusantium, cum, magnam rerum molestias dolores quidem qui odio quis maxime quasi assumenda corrupti libero sunt consectetur nemo dolorum? Magni.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, culpa, minus beatae reiciendis eligendi labore et modi corrupti voluptatem quasi aut totam eaque qui. Possimus veritatis placeat numquam voluptate modi.</p>
+        <a class="small button radius" href="voirArticle.html">Lire la suite</a>
+      </article>
+    </div>
+
+    <div class="row article">
+    <div class="large-3 columns moreArticle">
+      <i class="icon-calendar article"></i>
+    <a class="date article" href=""><time datetime="11:12">Jeudi 10 Octobre à 11:12</time></a>
+      <a class="commentsNb article" href="voirArticle.html"><i class="icon-comments"></i> 3 Commentaires</a>
+    </div>
+    <article class="large-9 columns">
+      <h3>Découverte de modernizr</h3>
+      <a href="" class="th radius imageArticle">
+        <img src="./img/modernizr.png" alt="">
+      </a>
+      <p class="blog">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, voluptatem, accusantium, cum, magnam rerum molestias dolores quidem qui odio quis maxime quasi assumenda corrupti libero sunt consectetur nemo dolorum? Magni.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, culpa, minus beatae reiciendis eligendi labore et modi corrupti voluptatem quasi aut totam eaque qui. Possimus veritatis placeat numquam voluptate modi.</p>
+        <a class="small button radius" href="voirArticle.html">Lire la suite</a>
+      </article>
+    </div>
+  </div>
+</div>
+<script>
+document.write('<script src=./js/vendor/'
+  + ('__proto__' in {} ? 'zepto': 'jquery')
+  + '.js><\/script>');</script>
+  <script src="./js/jquery.js"></script>
+  <script  src="./js/wall.js"></script>
+  <script src="./js/foundation/foundation.js"></script>
+  <script  src="./js/foundation/foundation.alerts.js"></script>
+  <script  src="./js/foundation/foundation.dropdown.js"></script>
+  <script  src="./js/foundation/foundation.orbit.js"></script>
+  <script  src="./js/foundation/foundation.section.js"></script>
+
+  <script>
+  $(document).foundation();
+  </script>
+</body>
+</html>

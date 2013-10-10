@@ -11,14 +11,15 @@
 
 </head>
 <body id="accueil">
-<div class="image">
+  <div class="image">
     <img src="" alt="">
     <div class="ban">
-       <ul class="mainMenu">
-          <li><a href="#container"><i class="icon-user"></i><p>Qui suis-je</p></a></li>
-          <li><a href="projets.html"><i class="icon-suitcase"></i><p>Mes projets</p></a></li>
-          <li><a href="contact.html"><i class="icon-globe"></i><p>Contactez moi</p></a></li>
-      </ul>
+     <ul class="mainMenu">
+      <li><a href="quisuisje.html"><i class="icon-user"></i><p>Qui suis-je</p></a></li>
+      <li><a href="blog.html"><i class="icon-comment"></i><p>Blog</p></a></li>
+      <li><a href="projets.html"><i class="icon-suitcase"></i><p>Mes projets</p></a></li>
+      <li><a href="contact.html"><i class="icon-globe"></i><p>Contactez moi</p></a></li>
+    </ul>
   </div>
 </div>
 <div id="container" style="display:block">
@@ -35,7 +36,7 @@
     <section class="top-bar-section">
       <ul class="right" style="display:inline;">
        <li class="active">
-         <a href="#container"><i class="icon-male"></i>&nbsp;Qui suis-je?</a>
+         <a href="quisuisje.html"><i class="icon-male"></i>&nbsp;Qui suis-je?</a>
        </li>
        <li>
          <a href="blog.html"><i class="icon-comment"></i>&nbsp;Blog</a>
@@ -55,41 +56,42 @@
   </section>
 </nav>
 <div class="main">
-    <ul class="breadcrumbs">
-      <li><a href="index.html">Accueil</a></li>
+  <ul class="breadcrumbs">
+
+    <li><a href="index.html">Accueil</a></li>
     <li class="current">Qui suis-je</li>
   </ul>
   <div class="row">
-    <h2><i class="icon-male"></i>&nbsp;Qui suis-je?</h2>
-    <div class="large-4 columns"><img src="img/imac.png" alt=""></div>
-    <div class="large-7  columns" itemscope itemtype="person" itemprop="description">
-
-      <p class="text">Bonjour à tous !</p>
-
-      <p class="text"> Julien Roland, étudiant en troisième et dernière année d'infographie à orientation web à la Haute École de la Province de Liège vous souhaite la bienvenue sur son portfolio !
-
-      <p class="text"> Passionné depuis toujours par la création et la réalisation de sites web, Julien Roland n'a jamais hésité à mettre ses connaissances au service des autres.</p>
-
-      <p class="text"> Curieux et souhaitant avant tout se perfectionner, à ses 17 ans, Julien choisit de se diriger vers des études techniques dans le but d'approfondir ses connaissances. Durant ses études il se rend vite compte de la voie qu'il doit emprunter : l'infographie.</p>
-      <p class="text">
-        Après 4 années d'études à la Haute École de la Province de Liège à Seraing, Julien Roland a maintenant la fierté de vous présenter son portfolio et de vous en souhaiter une bonne lecture !</p>
+    <h2><i class="icon-book"></i>&nbsp;Mes derniers post</h2>
+      <div class="large-3 columns moreArticle">
+        <i class="icon-calendar article"></i>
+        <a class="date article" href=""><time datetime="11:12">Jeudi 10 Octobre à 11:12</time></a>
+        <a class="commentsNb article" href="voirArticle.html"><i class="icon-comments"></i> 3 Commentaires</a>
       </div>
+      <article class="large-9 columns">
+        <h3>Découverte de modernizr</h3>
+        <a href="" class="th radius imageArticle">
+          <img src="./img/modernizr.png" alt="">
+        </a>
+        <p class="blog">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, voluptatem, accusantium, cum, magnam rerum molestias dolores quidem qui odio quis maxime quasi assumenda corrupti libero sunt consectetur nemo dolorum? Magni.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, culpa, minus beatae reiciendis eligendi labore et modi corrupti voluptatem quasi aut totam eaque qui. Possimus veritatis placeat numquam voluptate modi.</p>
+          <a class="small button radius" href="voirArticle.html">Lire la suite</a>
+        </article>
+
     </div>
   </div>
-</div>
-<span><a href="#accueil">Remonter</a></span>
-<script>
-document.write('<script src=./js/vendor/'
-  + ('__proto__' in {} ? 'zepto': 'jquery')
-  + '.js><\/script>');</script>
-<script  src="./js/jquery.js"></script>
-<script  src="./js/wall.js"></script>
-<script  src="./js/foundation/foundation.js"></script>
-<script  src="./js/foundation/foundation.alerts.js"></script>
-<script  src="./js/foundation/foundation.section.js"></script>
+  <script>
+  document.write('<script src=./js/vendor/'
+    + ('__proto__' in {} ? 'zepto': 'jquery')
+    + '.js><\/script>');</script>
+  <script  src="./js/jquery.js"></script>
+  <script  src="./js/wall.js"></script>
+  <script  src="./js/foundation/foundation.js"></script>
+  <script  src="./js/foundation/foundation.alerts.js"></script>
+  <script  src="./js/foundation/foundation.section.js"></script>
 
-<script>
-$(document).foundation();
-</script>
+  <script>
+  $(document).foundation();
+  </script>
 </body>
 </html>

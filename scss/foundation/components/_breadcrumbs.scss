@@ -60,7 +60,7 @@ $crumb-slash: "/" !default;
   a,
   span {
     text-transform: $crumb-font-transform;
-    color: $crumb-font-color;
+    color:rgb(20,200,120);
   }
 
   // Current is for the link of the current page

@@ -126,7 +126,7 @@ $('img.voir').css({
   backgroundPosition:'center 20px',
   overflow:"hidden",
 });
-if($('#container').size()&&$('#accueil').size())
+/*if($('#container').size()&&$('#accueil').size())
 {
   $('.ban li:first-child').click(function(e){
    e.preventDefault();
@@ -135,7 +135,7 @@ if($('#container').size()&&$('#accueil').size())
     display:"block",
   }).goTo();
  });
-}
+}*/
 if($('#container').size()&&!$('#accueil').size())
 {
   $('a[href="#accueil"]').click(function(e){

@@ -207,6 +207,7 @@ h3{
     text-align: left;
     padding:0;
     margin:auto;
+    margin-bottom: 1em;
     &:hover{
         border:0;
     }
@@ -221,6 +222,7 @@ nav.top-bar{
     padding:0 2%;
     position: fixed;
     a,li{
+        overflow: hidden;
         text-decoration: none;
         &:hover{
             text-decoration:none;
@@ -228,6 +230,19 @@ nav.top-bar{
             @include transition(all,0.3s,ease)
         }
     }
+}
+.button{
+    margin-top: 0.5em;
+    background-color:$main;
+    border-color: darken($main,30%);
+    &:hover,&:focus{
+        background-color:darken($main,10%);
+    }
+}
+.row.article{
+    border-bottom: 1px solid $ultraLightGray;
+    margin-bottom: 3em;
+    padding-bottom: 2em;
 }
 ul#imgTracker{
     padding:1% 0;
@@ -292,6 +307,18 @@ ul#imgTracker{
     padding:10% 2%;
     overflow: visible;
 }
+input:hover,textarea:hover,input:focus,textarea:focus{
+    border:1px solid $main;
+    @include single-box-shadow(lighten($main,40%),0,0,5px);
+}
+input[type="submit"]
+{
+    background-color: $main;
+    border:1px solid darken($main,15%);
+    &:hover{
+        background-color:darken($main,10%);
+    }
+}
 /*#imgTracker li:hover{
     @include rotateY(180deg,400px);
     @include transition(all,2s,linear);
@@ -341,43 +368,148 @@ ul#imgTracker{
         i{
             &:hover{
                 @include single-text-shadow(0,0,20px);
-         }
-     }
+            }
+        }
 
- }
- .contact:first-child{
-    margin-top: 20px;
-
-}
-.row form{
-    margin:20px 0;
-    input:hover,textarea:hover,input:focus,textarea:focus{
-        border:1px solid $main;
-        @include single-box-shadow(lighten($main,40%),0,0,5px);
     }
-    input[type="submit"]
-    {
-        background-color: $main;
-        border:1px solid darken($main,15%);
+    .contact:first-child{
+        margin-top: 20px;
+
+    }
+    .row form{
+        margin:20px 0;
+
+    }
+    fieldset{
+        border:1px solid $main;
+        padding:1em;
+    }
+    i{
+
+    }
+    .contact{
+        line-height: 2em;
+        display:block;
+        padding:0 0.5em;
         &:hover{
-            background-color:darken($main,10%);
+            background-color:$main;
         }
     }
+    p.blog{
+        line-height: 1.5em;
+        max-width: 80%;
+        text-align: justify;
+    }
+    .article a>i{
+        color:$gray;
+    }
+    .row.head {
+        margin-bottom: 2em;
+        h2{
+            border:0;
+            margin-bottom: 0;
+        }
+    }
+    .row.comments{
+        .large-8.columns{
+            margin: auto;
+
+            float:none;
+            h3{
+               text-align: center;
+               @include single-text-shadow();
+           }
+       }
+   }
+   textarea{
+    min-height: 60px;
+    margin:0;
 }
-fieldset{
-    border:1px solid $main;
-    padding:1em;
+ol.comments{
+    border:1px solid $ultraLightGray;
+    width:60%;
+    padding:1em 0.5em;
+    margin:1em auto;
+    li{
+        display:block;
+        width:80%;
+        margin: auto;
+        padding:1em 0.5em 1.2em 0.5em;
+        border-bottom: 1px solid $ultraLightGray;
+
+        .comment-header{
+            background-color: $comment-fond;
+            padding:1em;
+            margin-bottom: 0.5em;
+            img{
+                float:left;
+            }
+            .vcard{
+                padding:0.5em;
+                margin-bottom: 0;
+                a.comment-name,.comment-date{
+                    display:inline-block;
+                    width:100%;
+
+                }
+                a.comment-name{
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                a.comment-date{
+                    text-decoration: none;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+    li:last-child{
+        border:0;
+    }
 }
-i{
+
+article{
+    width:80%;
+    margin: auto;
+}
+article .fullArticle{
+    width:80%;
+    margin: auto;
+    text-align: justify;
+}
+
+.infosDate{
+    font-size: 0.9em;
+    line-height: 1.5em;
+
+    p{
+     text-align: center; 
+     color:$gray;
+ }
 
 }
-.contact{
-    line-height: 2em;
+.article{
     display:block;
-    padding:0 0.5em;
+    width:100%;
+    text-decoration: none;
+}
+.icon-calendar.article{
+    font-size: 2em;
+    color:$lightGray;
+}
+.imageArticle{
+    display:block;
+    float:left;
+    margin:0 1em 1em 0;
+}
+.date{
+    color:$gray;
     &:hover{
-        background-color:$main;
+        color:rgba(0,0,0,1);
     }
+}
+.moreArticle{
+  text-align: center;
 }
 /**IE TU PUES*/
 

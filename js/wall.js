@@ -209,7 +209,6 @@ $(window).resize(function()
       minHeight:iHeight,
     });
   }
-  dontOver(iHeight);
 
 });   
 

@@ -53,7 +53,7 @@
     <h2><i class="icon-globe"></i>&nbsp;Me contacter? </h2>
     <div class="large-4 columns"><img src="img/imac.png" alt=""></div>
     <div class="large-7  columns">
-      <form action="">
+      <form>
         <fieldset>
           <div class="row">
             <div class="large-6 columns">
@@ -67,9 +67,9 @@
               <textarea name="message" id="message" style="min-width:300px; min-height:100px;" cols="100" rows="20"></textarea>
             </div>
             <div class="large-5 large-offset-1 columns">
-              <address itemscope itemtype="person">
+              <address itemscope itemtype="http://schema.org/Person">
                 <span class="name contact" itemprop="name"><i class="icon-user"></i>&nbsp;Julien Roland</span>
-                <meta itemprop="name" content="www.julien-roland.be"></meta>
+                <meta itemprop="name" content="http://www.julien-roland.be"/>
                 <span class="mail contact" itemprop="email"><i class="icon-envelope-alt"></i>&nbsp;roland.julien.pro@gmail.com</span>
                 <span class="tel contact" itemprop="telephone"><i class="icon-mobile-phone"></i>&nbsp;+32 495/94.51.93</span>
                 <span class="adress contact" itemprop="homeLocation"><i class="icon-map-marker"></i>&nbsp;Namur (Belgique)</span>
@@ -87,22 +87,6 @@
   </div>
 </div>
 </div>
-<!--<div class="image" >
-  <ul data-orbit >
-    <li>
-      <img src="./img/test.png" />
-      <div class="orbit-caption">Super nouveau projet !</div>
-    </li>
-    <li>
-      <img src="./img/test.png" />
-      <div class="orbit-caption">...</div>
-    </li>
-    <li>
-      <img src="./img/test.png" />
-      <div class="orbit-caption">...</div>
-    </li>
-  </ul>
-</div>-->
 <script>
 document.write('<script src=./js/vendor/'
   + ('__proto__' in {} ? 'zepto': 'jquery')
@@ -112,7 +96,6 @@ document.write('<script src=./js/vendor/'
 <script src="./js/foundation/foundation.js"></script>
 <script  src="./js/foundation/foundation.alerts.js"></script>
 <script  src="./js/foundation/foundation.dropdown.js"></script>
-<script  src="./js/foundation/foundation.orbit.js"></script>
 <script  src="./js/foundation/foundation.section.js"></script>
 
 <script>

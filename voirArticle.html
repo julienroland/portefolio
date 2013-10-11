@@ -44,7 +44,7 @@
     </ul>
   </section>
 </nav>
-<section role="main" class="main" itemscope>
+<section role="main" class="main" itemscope itemtype="http://schema.org/Article">
   <ul class="breadcrumbs">
     <li><a href="quisuisje.html">Accueil</a></li>
     <li><a href="blog.html">Blog</a></li>
@@ -52,9 +52,9 @@
   </ul>
   <div class="row head">
     <h2><i class="icon-globe"></i>&nbsp;Découverte de Modernizr</h2>
-    <span class="infosDate"  itemtype="person">
+    <div class="infosDate"  itemtype="http://schema.org/Person">
      <p><a class="date article" href=""><time itemprop="datePublished" datetime="11:12">Jeudi 10 Octobre à 11:12</time></a>par <a itemprop="author" href="">Julien Roland</a></p>
-   </span>
+   </div>
  </div>
  <div class="row article">
   <article itemprop="text">
@@ -71,51 +71,50 @@
 </div>
 <ol class="comments" id="goComments">
   <li class="comment">
-        <div class="comment-header">
-          <img class="th radius" src="./img/profil.jpeg" alt="">
-          <div class="vcard">
-            <a class="comment-name" href="">Jean Bertant</a>
-            <a class="comment-date date" href="">Mercredi 9 Octobre à 10:11</a>
-          </div>
-        </div>
-        <p>Bonjour, article vraiment bien !</p>
+    <div class="comment-header">
+      <img class="th radius" src="./img/profil.jpeg" alt="">
+      <div class="vcard">
+        <a class="comment-name" href="">Jean Bertant</a>
+        <a class="comment-date date" href="">Mercredi 9 Octobre à 10:11</a>
+      </div>
+    </div>
+    <p>Bonjour, article vraiment bien !</p>
     
   </li>
   <li class="comment">
-        <div class="comment-header">
-          <img class="th radius" src="./img/profil.jpeg" alt="">
-          <div class="vcard">
-            <a class="comment-name" href="">Jean Bertant</a>
-            <a class="comment-date date" href="">Mercredi 9 Octobre à 10:11</a>
-          </div>
-        </div>
-        <p>Bonjour, article vraiment bien !</p>
+    <div class="comment-header">
+      <img class="th radius" src="./img/profil.jpeg" alt="">
+      <div class="vcard">
+        <a class="comment-name" href="">Jean Bertant</a>
+        <a class="comment-date date" href="">Mercredi 9 Octobre à 10:11</a>
+      </div>
+    </div>
+    <p>Bonjour, article vraiment bien !</p>
     
   </li>
 </ol>
 <div class="large-7 large-centered columns">
-  <form action="">
+  <form>
     <label for="commentaire">Poster un commentaire</label>
     <textarea name="commentaire" id="commentaire" placeholder="Entrer votre commentaire ici" cols="30" rows="10"></textarea>
     <input type="submit" class="small button secondary round" value="Poster votre commentaire">
   </form>
 </div>
-</div>
+</section>
 </div>
 <script>
 document.write('<script src=./js/vendor/'
   + ('__proto__' in {} ? 'zepto': 'jquery')
   + '.js><\/script>');</script>
-  <script src="./js/jquery.js"></script>
-  <script  src="./js/wall.js"></script>
-  <script src="./js/foundation/foundation.js"></script>
-  <script  src="./js/foundation/foundation.alerts.js"></script>
-  <script  src="./js/foundation/foundation.dropdown.js"></script>
-  <script  src="./js/foundation/foundation.orbit.js"></script>
-  <script  src="./js/foundation/foundation.section.js"></script>
+<script src="./js/jquery.js"></script>
+<script  src="./js/wall.js"></script>
+<script src="./js/foundation/foundation.js"></script>
+<script  src="./js/foundation/foundation.alerts.js"></script>
+<script  src="./js/foundation/foundation.dropdown.js"></script>
+<script  src="./js/foundation/foundation.section.js"></script>
 
-  <script>
-  $(document).foundation();
-  </script>
+<script>
+$(document).foundation();
+</script>
 </body>
 </html>

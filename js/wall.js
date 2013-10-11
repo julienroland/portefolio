@@ -2,6 +2,7 @@
   var iHeight=$(window).height();
   var headerHeight = $('header').height();
   var aImg= ["img/wall.png","img/wall1.png","img/wall2.png"];
+  var aBackground = ["img/background.png","img/background2.png","img/background3.png"];
 
   $('.bulle>figure').hide();
 
@@ -15,10 +16,33 @@
   }
   function addImage()
   {
+    if($('#accueil').size())
+    {
+
+      if($('.ban:visible'))
+      {
+       $('.image').css({
+        backgroundImage:'url('+aImg[Math.floor(Math.random()*3)]+')',
+        backgroundSize:"cover", 
+
+      });
+     }
+
+     else{
+      $('.image').css({
+        backgroundColor:"white",
+
+      });
+    }
+    $('.image>img').remove();
+    resizeImage();
+  }
+  else
+  {
     if($('.ban:visible'))
     {
      $('.image').css({
-      backgroundImage:'url('+aImg[Math.floor(Math.random()*3)]+')',
+      backgroundImage:'url('+aBackground[Math.floor(Math.random()*3)]+')',
       backgroundSize:"cover", 
 
     });
@@ -32,7 +56,7 @@
   }
   $('.image>img').remove();
   resizeImage();
-
+}
 };
 function resizeImage()
 {

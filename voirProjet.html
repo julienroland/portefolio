@@ -11,29 +11,32 @@
 
 </head>
 <body>
-  <div id="container">
+  <h1 class="section">Page du projet: logo personnel</h1>
+  <section id="container">
+    <h1 class="section">Contenu principal</h1>
    <nav class="top-bar fixed">
+    <h2 class="section">Menu principal</h2>
     <ul class="title-area">
       <!-- Title Area -->
       <li class="name">
-        <h1><a href="quisuisje.html"><i class="icon-reorder"></i>&nbsp;Revenir à l'accueil</a></h1>
+        <a href="quisuisje.html"><i class="icon-reorder"></i>&nbsp;Revenir à l'accueil</a>
       </li>
       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
 
-    <section class="top-bar-section">
+    <div class="top-bar-section">
       <ul class="right">
-       <li class="active">
+       <li >
          <a href="index.html"><i class="icon-male"></i>&nbsp;Qui suis-je?</a>
        </li>
        <li>
          <a href="blog.html"><i class="icon-comment"></i>&nbsp;Blog</a>
        </li>
-       <li class="has-dropdown not-click"><a href="projets.html"><i class="icon-suitcase"></i>&nbsp;Projets</a>
+       <li class="has-dropdown not-click active"><a href="projets.html"><i class="icon-suitcase"></i>&nbsp;Projets</a>
         <ul class="dropdown"> 
           <li><label>Liste des projets</label></li>
-          <li><a href="voirProjet.html"><i class="icon-camera"></i>&nbsp;Logo personnel</a></li>
+          <li class="active"><a href="voirProjet.html"><i class="icon-camera"></i>&nbsp;Logo personnel</a></li>
           <li><a href="voirProjet1.html"><i class="icon-signal"></i>&nbsp;Logo personnel</a></li>
           <li class="divider"></li>
         </ul>
@@ -42,9 +45,9 @@
         <a href="contact.html"><i class="icon-globe"></i>&nbsp;Contact</a>
       </li>
     </ul>
-  </section>
+  </div>
 </nav>
-<div class="main">
+<section class="main">
   <ul class="breadcrumbs">
     <li><a href="index.html">Accueil</a></li>
     <li><a href="projets.html">Projets</a></li>
@@ -64,8 +67,8 @@
       </p>
     </div>
   </div>
-</div>
-</div>
+</section>
+</section>
 <script>
 document.write('<script src=./js/vendor/'
   + ('__proto__' in {} ? 'zepto': 'jquery')

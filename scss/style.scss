@@ -80,8 +80,8 @@ nav ul li{
         bottom:0;
         position: absolute;
         margin:auto;
-        max-height:300px;
         text-align: center;
+        height:auto;
 
     }
 
@@ -328,6 +328,10 @@ input[type="submit"]
         background-color:darken($main,10%);
     }
 }
+.section{
+    text-indent: -9999px;
+    position: absolute;
+}
 /*#imgTracker li:hover{
     @include rotateY(180deg,400px);
     @include transition(all,2s,linear);
@@ -370,21 +374,19 @@ input[type="submit"]
           font-size: 10em;
           min-width:15%;
           overflow: hidden;
-          @include border-radius(10px);
+          @include border-radius(40px);
           padding:5px 0;
-          &:hover{
-           background-image: image-url('b2.png');
-           @include transition(all,0.8s,ease);
-       }
-       a{
-        color:rgba(0,0,0,0.9);
+        &:hover{
+            @include scale(1.2,1.2);
+            @include transition(all,0.5s,ease-in);
+        }
+          a{
+            color:rgba(0,0,0,0.9);
 
-        text-decoration: none;
+            text-decoration: none;
 
-        &:hover {
-            text-decoration:none;
-
-
+            &:hover,focus {
+                text-decoration:none;
         }
         p{
             font-size: 24px;
